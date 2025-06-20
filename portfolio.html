@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sahil Kumar | Portfolio</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: #f9f9f9;
+    }
+
+    header {
+      background-color: #000;
+      padding: 15px 0;
+    }
+
+    .header-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      color: #007bff;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .hero {
+      padding: 60px 20px;
+      background-color: #fff;
+    }
+
+    .intro {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .intro h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .contact {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .contact h1 {
+      margin-bottom: 20px;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin: 10px;
+      color: #333;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .social-links a i {
+      margin-right: 6px;
+      color: #007bff;
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .intro {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+
+      nav ul.show {
+        display: flex;
+        background: #000000;
+        position: absolute;
+        top: 50px;
+        right: 48px;
+        padding: 15px;
+        border-radius: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <h1 class="logo">Sahil Kumar</h1>
+      <nav>
+        <ul id="nav-links" class="nav-links">
+          <li><a href="technical.html">Skills</a></li> 
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="hero">
+      <div class="container">
+        <div class="intro" data-aos="fade-up">
+          <img src="WhatsApp Image 2025-06-19 at 16.47.14_74a2b719.jpg" alt="Sahil Kumar" class="profile-img">
+          <div>
+            <h2>Hi, I'm Sahil Kumar</h2>
+            <p>Frontend Developer | WordPress & Shopify Expert | SEO Specialist</p>
+            <p>
+              I’ve worked on various eCommerce projects, customizing modern Shopify themes and developing custom WordPress solutions with WooCommerce. 
+              I specialize in crafting responsive, fast-loading, and SEO-friendly interfaces using HTML, CSS, JavaScript, and Tailwind CSS.
+            </p>
+            <p>
+              I'm also skilled in building React.js applications, focusing on dynamic UI, reusable components, and API integrations. 
+              With WordPress, I create fully customized themes and plugins tailored to client needs. 
+              On Shopify, I design and modify Liquid templates to deliver high-converting storefronts with smooth UX and third-party app integration.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="contact" class="section contact">
+      <div class="container contact-center" data-aos="zoom-in">
+        <h1>Contact Me</h1>
+        <div class="social-links">
+          <a href="#" id="show-email-form"><i class="fas fa-envelope"></i> Email</a>
+
+          <a href="https://www.linkedin.com/in/sahil-kumar-2b8107261" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/Sahil-ku-mar" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+        
+    
+      <form id="email-form" style="display:none;">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Sahil Kumar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      offset: 100,
+      once: true
+    });
+  
+    
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+      document.getElementById("nav-links").classList.toggle("show");
+    });
+  
+   
+    document.getElementById("show-email-form").addEventListener("click", function (e) {
+      e.preventDefault();
+      document.getElementById("email-form").style.display = "block";
+      this.style.display = "none"; 
+    });
+  </script>
+  
+</body>
+</html>

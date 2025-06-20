@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Sahil Kumar</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    html, body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    header {
+      background-color: #000;
+    
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      color: #fff;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #007bff;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        display: none;
+        background-color: #1a1a1a;
+        position: absolute;
+        right: 20px;
+        top: 70px;
+        width: 200px;
+        padding: 15px;
+        border-radius: 8px;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+    }
+
+    .projects {
+      flex: 1;
+      padding: 60px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .project-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 25px 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: 0.3s ease;
+    }
+
+    .project-card h3 {
+      font-size: 20px;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .project-card a {
+      display: inline-block;
+      background-color: #007bff;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+
+    .project-card a:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <h1 class="logo">Sahil Kumar</h1>
+      <nav>
+        <ul id="nav-links" class="nav-links">
+          <li><a href="portfolio.html">Home</a></li>
+          <li><a href="technical.html">Skills</a></li>
+          <li><a href="project.html" class="active">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+    </div>
+  </header>
+
+  <section class="section projects">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-down">Projects</h2>
+      <div class="project-list">
+        <div class="project-card" data-aos="fade-up">
+          <h3>Kindy Portraits – Shopify Store</h3>
+          <p>Developed a clean, responsive Shopify theme for a children’s portrait studio with custom cart and order flow.</p>
+          <a href="https://www.kindyportraits.com.au/" target="_blank">Visit Site</a>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <h3>Mocerra – WooCommerce Store</h3>
+          <p>Developed a sleek WordPress eCommerce website using WooCommerce and custom theme design.</p>
+          <a href="https://mocerra.com/" target="_blank">Visit Site</a>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <h3>Brikzz – Home Interior Store</h3>
+          <p>Built a mobile-first WordPress theme with WooCommerce and advanced product filtering.</p>
+          <a href="https://brikzz.com/" target="_blank">Visit Site</a>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <h3>School Portraits – Booking Platform</h3>
+          <p>Designed a WordPress site for a school photography business with user-friendly booking and gallery features.</p>
+          <a href="http://schoolportraits.com.au/" target="_blank">Visit Site</a>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+          <h3>Fitness Group – SEO Optimization</h3>
+          <p>Worked on SEO strategy and performance optimization for a Shopify-based fitness training platform.</p>
+          <a href="https://the-fitness-group-canada.myshopify.com/" target="_blank">Visit Site</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Sahil Kumar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      offset: 100,
+      once: true
+    });
+
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+      document.getElementById("nav-links").classList.toggle("show");
+    });
+  </script>
+</body>
+</html>

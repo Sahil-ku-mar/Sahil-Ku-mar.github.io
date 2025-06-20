@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Technical Skills | Sahil Kumar</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    header {
+      background-color: #000;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      color: #fff;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #007bff;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        display: none;
+        background-color: #1a1a1a;
+        position: absolute;
+        right: 10px;
+        top: 70px;
+        width: 200px;
+        padding: 15px;
+        border-radius: 8px;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+    }
+
+    section.skills {
+      padding: 80px 20px;
+      background-color: #f9f9f9;
+    }
+
+    section.skills h1 {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 2.8rem;
+      color: #333;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 55px 80px;
+      justify-items: center;
+      align-items: center;
+    }
+
+    .skills-grid span {
+      background: #fff;
+      padding: 30px 20px;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 500;
+      width: 100%;
+      max-width: 220px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.4s ease;
+    }
+
+    .skills-grid span i {
+      display: block;
+      font-size: 32px;
+      margin-bottom: 12px;
+      color: #007bff;
+      transition: transform 0.4s ease;
+    }
+
+    .skills-grid span:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0, 123, 255, 0.2);
+      background-color: #ffffff;
+    }
+
+    .contact {
+      padding: 60px 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .contact h1 {
+      margin-bottom: 20px;
+    }
+
+    .social-links {
+      margin-bottom: 20px;
+    }
+
+    .social-links a,
+    .social-links button {
+      display: inline-block;
+      margin: 10px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .social-links a i,
+    .social-links button i {
+      margin-right: 6px;
+      color: #fff;
+    }
+
+    .social-links a:hover,
+    .social-links button:hover {
+      background-color: #0056b3;
+    }
+
+    form#email-form {
+      display: none;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    .button-wrapper {
+      text-align: center;
+    }
+
+    form button[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    form button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <h1 class="logo">Sahil Kumar</h1>
+      <nav>
+        <ul id="nav-links" class="nav-links">
+          <li><a href="portfolio.html">Home</a></li>
+          <li><a href="technical.html" class="active">Skills</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="skills" class="section skills">
+      <div class="container">
+        <h1 data-aos="fade-down">Technical Skills</h1>
+        <div class="skills-grid">
+          <span data-aos="fade-up" data-aos-delay="50"><i class="fab fa-html5"></i> HTML</span>
+          <span data-aos="fade-up" data-aos-delay="100"><i class="fab fa-css3-alt"></i> CSS</span>
+          <span data-aos="fade-up" data-aos-delay="150"><i class="fab fa-js-square"></i> JavaScript</span>
+          <span data-aos="fade-up" data-aos-delay="200"><i class="fab fa-react"></i> React.js</span>
+          <span data-aos="fade-up" data-aos-delay="250"><i class="fas fa-wind"></i> Tailwind CSS</span>
+          <span data-aos="fade-up" data-aos-delay="300"><i class="fab fa-uikit"></i> Material UI</span>
+          <span data-aos="fade-up" data-aos-delay="350"><i class="fab fa-php"></i> PHP</span>
+          <span data-aos="fade-up" data-aos-delay="400"><i class="fab fa-wordpress"></i> WordPress</span>
+          <span data-aos="fade-up" data-aos-delay="450"><i class="fab fa-shopify"></i> Shopify</span>
+          <span data-aos="fade-up" data-aos-delay="500"><i class="fas fa-search"></i> SEO</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container contact-center" data-aos="zoom-in">
+        <h1>Contact Me</h1>
+        <div class="social-links">
+          <button id="show-email-form"><i class="fas fa-envelope"></i> Email Me</button>
+          <a href="https://www.linkedin.com/in/sahil-kumar-2b8107261" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/Sahil-ku-mar" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+
+        <form id="email-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+          <div class="button-wrapper">
+            <button type="submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sahil Kumar. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      offset: 100,
+      once: true
+    });
+
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+      document.getElementById("nav-links").classList.toggle("show");
+    });
+
+    document.getElementById("show-email-form").addEventListener("click", function (e) {
+      e.preventDefault();
+      document.getElementById("email-form").style.display = "block";
+      this.style.display = "none";
+    });
+  </script>
+</body>
+</html>
